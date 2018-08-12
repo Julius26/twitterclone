@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: twitterclone_development
+
+  database: twitterclone
+  username: twitterclone
+  password: twitterclone123
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
