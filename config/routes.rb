@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # get 'static_pages/home'
   # staticpage home set to default
 
-  root  'static_pages#ghome'
+  root  'static_pages#home'
  
   get "static_pages/help", to: "static_pages#help"
 
