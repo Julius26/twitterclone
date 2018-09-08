@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Twitterclone</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+<title>Twitter clone</title>
+<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<%# <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css"> %>
+<%= stylesheet_link_tag 'application', media: 'all','data-turbolinks-track': 'reload' %>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+</script>
+<![endif]-->
+</head>
+<body>
+
+
+<%= render 'layouts/header'%>
+<div class="container">
+<%= yield %>
+</div>
+<%= render 'layouts/footer'%>
+<body>
 </html>
