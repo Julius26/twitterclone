@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Twitterclone</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
+  <html>
+    <head>
+      <title>Twiter Clone</title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <%# rendering  the header partials %>
+   <%= render 'layouts/header'%>
+    <div class="container">
+    <%# rendering the default display %>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer'%>
+  </html>
