@@ -1,0 +1,9 @@
+<%= form_for(@static_page) do |f| %>
+
+    <%= f.label "Name" %>
+    <%= f.text_field :name %><br>
+    <%= f.label "Email" %>
+    <%= f.text_field :email %><br>
+
+    <%= f.submit "Save" %>
+<% end %>
