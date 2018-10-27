@@ -8,16 +8,19 @@ class StaticPagesController < ApplicationController
 
   end
 
-  def new
+  def new 
+    # @user= User.new
+    
     @static_page = StaticPage.new
   end
+
 
   def create
     @static_page = StaticPage.new(static_page_params)
     if @static_page.save
       redirect_to :show
     else
-      render :edit
+      render :new
     end
   end
 

@@ -1,9 +1,31 @@
-<%= form_for(@static_page) do |f| %>
+<% provide(:title, 'Sign Up')%>
+<h1>Sign Up</h1>
 
-    <%= f.label "Name" %>
-    <%= f.text_field :name %><br>
-    <%= f.label "Email" %>
-    <%= f.text_field :email %><br>
 
-    <%= f.submit "Save" %>
-<% end %>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@static_page) do |f| %>
+            <div>
+                <%= f.label :name %>
+                <%= f.text_field :name %><br>
+            </div>
+
+            <div>
+                <%= f.label :email %>
+                <%= f.email_field :email %><br>
+            </div>
+
+            <div>
+                <%= f.label :password %>
+                <%= f.password_field :password %><br>
+            </div>
+            <div>
+                <%=f.label :password_confirmation%>
+                <%= f.password_field :password_confirmation%><br>
+            </div>
+
+           <%=f.submit "Submit"%>
+        
+        <% end %>
+    </div>
+</div>
